@@ -1,9 +1,16 @@
 import requests
+import os
+from dotenv import load_dotenv
 
-# --- 1. USER CONFIGURATION ---
-API_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImNlZjI4ZjFjLTgyMTUtNDY1MC1hMDRmLTBmZDI2ZjZlMDJjMCIsImlhdCI6MTc3NDg2MTE4OCwic3ViIjoiZGV2ZWxvcGVyL2QzNDBlZTllLThhMDEtODIzOC02NDY0LTQzOTIyMWUxOWRkNSIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxOTMuMTAuMTkxLjEyMiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.6qRaHDsH0IZhK8d4RiOm1C9yBK-yyZV1H315lza6tjaky5-F6hWeDg9uBMj_XrVGETTa1RYIAWuBIS-OpemzYQ"  
-PLAYER_TAG = "%238GU9LJGG"     
-CARD_TO_CHECK = "Giant Skeleton" 
+# This line finds the .env file and loads the variables
+load_dotenv()
+
+# --- 1. USER CONFIGURATION (Now pulling from .env) ---
+API_KEY = os.getenv("CR_API_KEY")
+PLAYER_TAG = os.getenv("PLAYER_TAG")
+CARD_TO_CHECK = "Knight" 
+
+# ... (The rest of your UPGRADE_DATA and run_calculator code remains the same)
 
 # --- 2. 2026 UPGRADE DATA ---
 UPGRADE_DATA = {
